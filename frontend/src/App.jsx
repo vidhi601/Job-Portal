@@ -1,8 +1,15 @@
-function App(){
-  return( <div>
-    <h1>Job Portal</h1>
-  </div>
-  )
-}
+import { BrowserRouter,Routes,Route } from "react-router-dom";
+import Landing from "./pages/landing";
 
-export default App;c
+function App(){
+    return(
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Landing/>}/>
+        </Routes>
+        
+        
+        </BrowserRouter>
+    )
+}
+export default App;
