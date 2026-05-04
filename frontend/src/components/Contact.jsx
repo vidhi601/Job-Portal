@@ -48,7 +48,7 @@ function Contact() {
       )}
 
       <div className="flex gap-6 mt-8">
-        <a href="https://linkedin.com/in/yourprofile" className="text-blue-400 hover:underline">
+        <a href="https://linkedin.com/in/vidhi601" className="text-blue-400 hover:underline">
           LinkedIn
         </a>
         <a href="mailto:vidhimalik93@gmail.com" className="text-blue-400 hover:underline">
