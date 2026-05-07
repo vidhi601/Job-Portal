@@ -1,14 +1,15 @@
 import Navbar from "../components/Navbar";
 import bg from "../assets/login bg image.jpeg";
+import { Link } from "react-router-dom";
 
 function Login(){
     return(
         <div>
             <Navbar/>
-            <div className="flex justify-center items-center min-h-screen"
+            <div className="flex justify-center items-center min-h-screen px-4"
                 style={{backgroundImage: `url(${bg})`, backgroundSize:"cover"}}>
                 
-                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-80 space-y-4 border border-white/40">
+                <div className="bg-white/10 backdrop-blur-md p-8 rounded-2xl shadow-2xl w-full max-w-sm space-y-4 border border-white/40">
                     
                     <h2 className="text-2xl font-bold text-center text-white drop-shadow">Welcome Back</h2>
                     <p className="text-center text-white/70 text-sm">Login to your HireHub account</p>
@@ -29,7 +30,8 @@ function Login(){
                     </button>
                     
                     <p className="text-center text-white/80 text-sm">
-                        Don't have an account? <span className="text-white font-semibold underline cursor-pointer">Sign Up</span>
+                        Don't have an account?{' '}
+                        <Link to="/signup" className="text-white font-semibold underline">Sign Up</Link>
                     </p>
                 </div>
 

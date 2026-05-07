@@ -9,7 +9,7 @@ function Contact() {
   };
 
   return (
-    <div className="flex flex-col bg-amber-100 items-center justify-center py-16 px-4">
+    <div id="contact" className="flex flex-col bg-amber-100 items-center justify-center py-16 px-4">
       
       <h1 className="text-3xl font-bold text-blue-400 mb-8">Contact Us</h1>
 

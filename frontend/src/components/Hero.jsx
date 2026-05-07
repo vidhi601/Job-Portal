@@ -2,7 +2,7 @@ import heroImg from '../assets/images.jpeg'
 
 function Hero(){
     return(
-        <div className="bg-gradient-to-r from-blue-900 to-purple-900 w-full py-16 px-6 md:px-10">
+        <div id="hero" className="bg-gradient-to-r from-blue-900 to-purple-900 w-full py-16 px-6 md:px-10">
             <div className="flex flex-col md:flex-row justify-between items-center gap-8">
                 <div className="w-full md:w-1/2 text-white flex flex-col gap-4 text-center md:text-left">
                     <h6 className="text-purple-300 text-sm font-semibold tracking-widest uppercase">Why you need to join us?</h6>

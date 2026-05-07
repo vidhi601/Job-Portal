@@ -1,6 +1,6 @@
 function About(){
     return(
-        <div className="flex flex-col w-full bg-amber-50 items-center py-16 px-10">
+        <div id="about" className="flex flex-col w-full bg-amber-50 items-center py-16 px-10">
             <h1 className="uppercase text-blue-400 py-6 text-3xl font-bold">Why HireHub?</h1>
             <div className="flex flex-col md:flex-row gap-8 mt-6">
                 <div className="bg-white rounded-xl p-6 shadow-md w-full md:w-64 flex flex-col gap-3">
