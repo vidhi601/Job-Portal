@@ -13,6 +13,7 @@ function Navbar() {
         <li><a href="/#hero" className="cursor-pointer hover:text-blue-600">Home</a></li>
         <li> <a href="/#about"className="cursor-pointer hover:text-blue-600">About</a></li>
         <li><a href="/#contact" className="cursor-pointer hover:text-blue-600">Contact</a></li>
+        
       </ul>
 
       <div className="hidden md:flex gap-4">

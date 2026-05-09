@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import heroImg from '../assets/images.jpeg'
 
 function Hero(){
@@ -8,7 +9,11 @@ function Hero(){
                     <h6 className="text-purple-300 text-sm font-semibold tracking-widest uppercase">Why you need to join us?</h6>
                     <h1 className="text-3xl md:text-4xl font-bold leading-tight">HireHub searches a job for you based on skill match</h1>
                     <p className="text-gray-300 text-base">Stop applying blindly. HireHub matches your skills with the right jobs — saving time and getting you hired faster.</p>
-                    <button className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg w-fit mx-auto md:mx-0">Get Started</button>
+                    <Link to="/login" className="w-fit mx-auto md:mx-0">
+                        <button className="bg-purple-500 hover:bg-purple-600 text-white px-6 py-3 rounded-lg">
+                            Get Started
+                        </button>
+                    </Link>
                 </div>
                 <div className="w-full md:w-1/2 flex justify-center md:justify-end">
                     <img src={heroImg} alt="hero" className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-2xl mix-blend-luminosity" />
