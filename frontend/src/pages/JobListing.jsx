@@ -1,13 +1,8 @@
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
+import jobs from "../data/jobs";
 
-const jobs = [
-  { id: 1, title: "Frontend Developer", company: "Google", location: "Bangalore", salary: "8-12 LPA", type: "Full-time" },
-  { id: 2, title: "React Developer", company: "Amazon", location: "Delhi", salary: "10-15 LPA", type: "Full-time" },
-  { id: 3, title: "UI Designer", company: "Swiggy", location: "Mumbai", salary: "5-8 LPA", type: "Internship" },
-  { id: 4, title: "Backend Developer", company: "Flipkart", location: "Bangalore", salary: "12-18 LPA", type: "Full-time" },
-  { id: 5, title: "Node.js Developer", company: "Zomato", location: "Gurgaon", salary: "8-14 LPA", type: "Full-time" },
-  { id: 6, title: "Data Analyst", company: "Paytm", location: "Noida", salary: "6-10 LPA", type: "Internship" },
-]
+
 
 function JobListing() {
   return (
@@ -50,9 +45,9 @@ function JobListing() {
               <p className="text-xs text-gray-500">📍 {job.location}</p>
               <p className="text-xs text-gray-500">💰 {job.salary}</p>
               <span className="text-xs bg-blue-50 text-blue-600 px-3 py-1 rounded-full w-fit">{job.type}</span>
-              <button className="mt-2 w-full bg-blue-500 hover:bg-blue-600 text-white text-sm py-2 rounded-lg transition">
-                Apply
-              </button>
+              <Link to={`/jobs/${job.id}`} className="mt-2 w-full bg-blue-500 hover:bg-blue-600 text-white text-sm py-2 rounded-lg transition block text-center">
+  Apply
+</Link>
             </div>
           ))}
         </div>

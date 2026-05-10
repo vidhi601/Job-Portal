@@ -3,6 +3,7 @@ import Landing from "./pages/landing";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import JobListing from "./pages/JobListing";
+import JobDetail from  "./pages/JobDetail";
 
 function App(){
     return(
@@ -12,6 +13,7 @@ function App(){
             <Route path="/Login" element={<Login/>}/>
             <Route path="/Signup" element={<Signup/>}/>
             <Route path="/JobListing" element={<JobListing/>}/>
+           <Route path="/jobs/:id" element={<JobDetail/>}/>
         </Routes>
         
         
