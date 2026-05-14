@@ -1,10 +1,19 @@
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import jobs from "../data/jobs";
+import { useState } from "react";
 
 
 
 function JobListing() {
+  const[search,setSearch]=useState("");
+  const[location,setLocation]=useState("");
+  const[type,setType]=useState("")
+  const filteredJobs = jobs.filter((job) =>
+  job.title.toLowerCase().includes(search.toLowerCase()) &&
+  (location === "" || job.location === location) &&
+  (type === "" || job.type === type)
+)
   return (
     <div className="min-h-screen bg-gray-50">
       <Navbar />
@@ -15,15 +24,21 @@ function JobListing() {
             type="text"
             placeholder="Search Jobs"
             className="w-full flex-1 rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400"
+            value={search}
+            onChange={(e)=>setSearch(e.target.value)}
           />
-          <select className="w-full rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-44">
+          <select className="w-full rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-44"
+            value={location}
+            onChange={(e)=>setLocation(e.target.value)}>
             <option>All Locations</option>
             <option>Mumbai</option>
             <option>Bangalore</option>
             <option>Noida</option>
             <option>Gurgaon</option>
           </select>
-          <select className="w-full rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-52">
+          <select className="w-full rounded-lg border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-400 md:w-52"
+            value={type}
+            onChange={(e)=>setType(e.target.value)}>
             <option>All Types</option>
             <option>Full-time</option>
             <option>Internship</option>
@@ -31,7 +46,7 @@ function JobListing() {
         </div>
 
         <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {jobs.map((job) => (
+          {filteredJobs.map((job) => (
             <div key={job.id} className="bg-white rounded-xl p-5 border border-gray-200 shadow-sm flex flex-col gap-2">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center text-blue-600 font-bold text-lg">
